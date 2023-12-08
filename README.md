@@ -13,7 +13,7 @@
   <p align="center">
     Well-documented OOP console app to solve an algorithm
     <br />
-    <a href="https://i.imgur.com/z6rTxX1.png"><strong>Codecoverage »</strong></a>
+    <a href="https://i.imgur.com/z6rTxX1.png"><strong>Codecoverage Â»</strong></a>
 </div>
 
 
@@ -64,13 +64,13 @@ There are two ways to run this project.
 
 <!-- Code coverage -->
 ### Code coverage 
-* Manually opening from your local env. <a href="https://i.imgur.com/z6rTxX1.png">» VaultHomework/coveragereport/index.html</a>
+* Manually opening from your local env. <a href="https://i.imgur.com/z6rTxX1.png">Â» VaultHomework/coveragereport/index.html</a>
 * How to generate a new report?
 1. Run tests:
     ```sh
     dotnet test --collect:"XPlat Code Coverage"
     ```
-2. Install reporgenerator:
+2. Install reportgenerator:
 
     ```sh
     dotnet tool install -g dotnet-reportgenerator-globaltool
