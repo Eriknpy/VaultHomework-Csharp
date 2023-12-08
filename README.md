@@ -4,9 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://i.imgur.com/dZVNWFP.png" alt="Logo" width="80" height="80">
-  </a>
+  <a><img src="https://i.imgur.com/dZVNWFP.png" alt="Logo" width="80" height="80"></a>
 
  ######  <h3 align="center">Vault Homework in C#</h3>
 
@@ -32,23 +30,22 @@
 <!--About The Solution -->
 ## About The Solution
 
-I found this a perfect opportunity to use the Template method as a skeleton of the algorithm. There are two different approaches to coding:
+I found this as a perfect opportunity to use the Template method as a skeleton of the algorithm. There are two different approaches to coding:
 * General: The least language-specific approach
 * C# specific: Linq
 
-Each approach solves the task in 3 steps 
+Each approach solves the algorithmical part in 3 steps
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-There are two ways to run this project.
+There are two recommended ways to run this project.
 * Run the project from your IDE, preferably Visual Studio 2022
     * You can add your input.txt:
-            1. Go to the VaultHomework\VaultHomework folder where VaultHomework.csproj located
+            1. Go to the VaultHomework\VaultHomework folder where is VaultHomework.csproj located
       and add your file.
-        2. Specify the
-    * file location with CLI:
+        2. Specify the file location with CLI:
         ```sh
         dotnet run yourfilename.txt
         ```
@@ -57,7 +54,7 @@ There are two ways to run this project.
     ```sh
     docker build -t vaulthomework .
     ```
-    2. Run the docker container:
+2. Run the docker container:
     ```sh
     docker run --rm vaulthomework
     ```
