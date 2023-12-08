@@ -11,7 +11,7 @@
  ######  <h3 align="center">Vault Homework in C#</h3>
 
   <p align="center">
-    Well documented OOP console app to solve an algorithm
+    Well-documented OOP console app to solve an algorithm
     <br />
     <a href="https://i.imgur.com/z6rTxX1.png"><strong>Codecoverage »</strong></a>
 </div>
@@ -32,7 +32,7 @@
 <!--About The Solution -->
 ## About The Solution
 
-I found this a perfect opportunity to use the Template method as a skeleton of the algorithm. There are two different approaches by coding:
+I found this a perfect opportunity to use the Template method as a skeleton of the algorithm. There are two different approaches to coding:
 * General: The least language-specific approach
 * C# specific: Linq
 
@@ -44,20 +44,20 @@ Each approach solves the task in 3 steps
 
 There are two ways to run this project.
 * Run the project from your IDE, preferably Visual Studio 2022
-    * You can add your own input.txt:
-            1. Go to VaultHomework\VaultHomework folder where VaultHomework.csproj located
+    * You can add your input.txt:
+            1. Go to the VaultHomework\VaultHomework folder where VaultHomework.csproj located
       and add your file.
         2. Specify the
     * file location with CLI:
         ```sh
         dotnet run yourfilename.txt
         ```
-* Docker container: Navigate to the root folder of the repo where Dockerfile located.
-1.Build the docker image: 
+* Docker container: Navigate to the root folder of the repo where Dockerfile is located.
+1. Build the docker image: 
     ```sh
     docker build -t vaulthomework .
     ```
-    2.Run the docker container:
+    2. Run the docker container:
     ```sh
     docker run --rm vaulthomework
     ```
