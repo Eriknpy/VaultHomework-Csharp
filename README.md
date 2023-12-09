@@ -42,14 +42,18 @@ Each approach solves the algorithmic part in 3 steps
         * 100mb vs 500mb file simulation: 
         ```csharp
             File.ReadAllLines(filePath)
-            100mb file: 1.7gb RAM consumed
-            500mb file: OutOfMemoryException
+            // 100mb file: 1.7gb RAM consumed
+            // 500mb file: OutOfMemoryException
     
-            The variation I used: 
+            // The variation I used: 
             using (var fileStream = File.OpenRead(filePath))
             using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
-            100mb file: 5mb RAM consumed
-            500mb file: 30mb RAM consumed
+            // 100mb file: 5mb RAM consumed
+            // 500mb file: 30mb RAM consumed
+            // Why is that?
+            // While the first option loads everything to the memory.
+            // Mine reads line by line and replaces the previously used one with the new one. 
+            // Therefore, It always uses as much space as the current line requires.
         ```
 
 <!-- GETTING STARTED -->
@@ -57,9 +61,9 @@ Each approach solves the algorithmic part in 3 steps
 
 There are two recommended ways to run this project.
 * Run the project from your IDE, preferably Visual Studio 2022
-    * You can add your input.txt:
+    * You can add your input.txt:\
             1. Go to the VaultHomework\VaultHomework folder where is VaultHomework.csproj located
-      and add your file.
+      and add your file.\
         2. Specify the file location with CLI:
         ```sh
         dotnet run yourfilename.txt
