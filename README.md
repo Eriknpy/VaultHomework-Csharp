@@ -22,7 +22,7 @@
   <ol>
     <li><a href="#about-the-solution">About The Solution</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
-    <li><a href="#xunit-test">xUnit Test</a></li>
+    <li><a href="#xunit-tests">xUnit Tests</a></li>
     <li><a href="#code-coverage">Code coverage</a></li>
   </ol>
 </details>
@@ -34,8 +34,23 @@ I found this as a perfect opportunity to use the Template method as a skeleton o
 * General: The least language-specific approach
 * C# specific: Linq
 
-Each approach solves the algorithmical part in 3 steps
+Each approach solves the algorithmic part in 3 steps
 
+* Features:
+    * Multi-stage docker file 1.2gb reduced to 140mb
+    * The most efficient and highly customizable File read operation suitable for large file scenarios
+        * 100mb vs 500mb file simulation: 
+        ```csharp
+            File.ReadAllLines(filePath)
+            100mb file: 1.7gb RAM consumed
+            500mb file: OutOfMemoryException
+    
+            The variation I used: 
+            using (var fileStream = File.OpenRead(filePath))
+            using (var streamReader = new StreamReader(fileStream, Encoding.UTF8, true, BufferSize))
+            100mb file: 5mb RAM consumed
+            500mb file: 30mb RAM consumed
+        ```
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -77,8 +92,8 @@ There are two recommended ways to run this project.
     reportgenerator -reports:'**\coverage.cobertura.xml' -targetdir:"coveragereport"-reporttypes:Html
     ```
 
-<!-- xUnit Test -->
-### xUnit Test
+<!-- xUnit Tests -->
+### xUnit Tests
 
 In total, there are 30 unit tests, distributed equally.
 <p align="right">(<a href="#vault-homework-in-c">back to top</a>)</p>
